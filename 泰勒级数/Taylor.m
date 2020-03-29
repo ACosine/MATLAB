@@ -38,22 +38,3 @@ end
 end
 disp([x' f1'])
 %%end
-
-
-%%
-format long
-[yApprox] = myCoshApproximator(x, n),
-yTrue = cosh(1.5)
-y3 = myCoshApproximator(1.5,3)
-y10 = myCoshApproximator(1.5,10)
-y20 = myCoshApproximator(1.5,20)
-x = linspace(0,2,100);
-plot(x,cosh(x),x,myCoshApproximator(x,10))
-xlabel('x')
-ylabel('y')
-title('cosh(x) with 10th ordder approximation')
-plot(x,cosh(x),x ,myCoshApproximator(x,2))
-title('cosh(x) with 2nd or order approximation')
-legend('real','approx')
-
-
